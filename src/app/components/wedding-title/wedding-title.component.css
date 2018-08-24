@@ -1,0 +1,45 @@
+:host {
+    --title-small-scale: 0.7;
+    --title-width: 300px;
+    --title-height: 75px;
+    --img-aspect-ratio: 0.17;
+}
+
+#flowers {
+    width: var(--title-width);
+    height: calc(var(--title-width) * var(--img-aspect-ratio));
+    top: 15px;
+}
+
+#names {
+    left: 53px;
+}
+
+.wedding-title > * {
+    position: absolute;
+}
+
+.wedding-title {
+    cursor: pointer;
+    position: relative;
+    width: var(--title-width);
+    height: var(--title-height);
+}
+
+@media only screen and (max-width: 500px) {
+    .wedding-title {
+        width: calc(var(--title-width) * var(--title-small-scale));
+        height: calc(var(--title-height) * var(--title-small-scale));
+    }
+    
+    #flowers {
+        width: calc(var(--title-width) * var(--title-small-scale));
+        height: calc((var(--title-width) * var(--img-aspect-ratio)) * var(--title-small-scale));
+        top: 20px;
+    }
+    
+    #names {
+        left: 42px;
+        font-size: 2em;
+    }
+}

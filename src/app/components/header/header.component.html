@@ -1,0 +1,9 @@
+<div class="flex-row">
+    <div class="ham-wrapper flex-col flex-center">
+        <i (click)="onClickHam()" type="button" class="fa fa-bars"></i>
+    </div>
+    <div class="title-wrapper flex-col-spread">
+        <app-wedding-title class="flex-child-center"></app-wedding-title>
+    </div>
+</div>
+<app-dropdown-menu [ngClass]="settings.showMenu ? 'menu-show' : ''"></app-dropdown-menu>

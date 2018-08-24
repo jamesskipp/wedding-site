@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light|Amatic+SC|Alegreya+Sans');
+
+:root {
+    --color-pr-white: #ffffff;
+    --color-dk-pink: #fc46a1;
+    --color-lt-pink: #ffe2eb;
+    --color-dk-grey: #484848;
+    --color-lt-grey: #989898;
+    --color-lt-blue: #edf2ff;
+
+    --pr-font-color: var(--color-dk-grey);
+
+    --pr-bg-color: var(--color-lt-blue);
+    --lt-bg-color: var(--color-lt-pink);
+    --dk-bg-color: var(--color-dark-pink);
+
+    --pr-bor-color: var(--color-lt-grey);
+
+    --pr-bs: 1px 1px 5px var(--pr-bor-color);
+    --pr-bs-bot: 0 0 5px var(--pr-bor-color);
+    --pr-bs-top: 0px 5px 5px 5px var(--pr-bor-color);
+}
+
+html, body {
+    background-color: var(--pr-bg-color);
+    color: var(--pr-font-color);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+app-header {
+    display: block;
+    background-color: var(--lt-bg-color);
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--pr-bor-color);
+    box-shadow: var(--pr-bs-bot);
+    padding: 10px;
+    transition: 250ms ease all;
+}
+
+app-pane {
+    display: flex;
+    width: 100%;
+    background-color: var(--lt-bg-color);
+    border: 1px solid var(--pr-bor-color);
+    padding: 20px;
+    box-shadow: var(--pr-bs);
+}
+
+app-footer {
+    flex-shrink: 0;
+    background-color: var(--lt-bg-color);
+    margin-top: 20px;
+    border-top: 1px solid var(--pr-bor-color);
+    box-shadow: var(--pr-bs-top);
+    padding: 20px;
+    font-size: .8em;
+    font-weight: 400;
+}
+
+i.fa[type="button"] {
+    cursor: pointer;
+    padding: 4px;
+    font-size: 1.5em;
+    transition: 250ms ease all;
+}
+
+i.fa[type="button"]:hover {
+    color: var(--pr-bg-color);
+}
+
+.pill {
+    display: inline-block;
+    background-color: var(--pr-bg-color);
+    border-radius: 12px;
+    border-color: 1px solid var(--pr-bor-color);
+    box-shadow: var(--pr-bs);
+    padding: 8px;
+    margin: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 250ms ease all;
+    white-space: nowrap;
+}
+
+.pill:hover {
+    color: var(--color-pr-white);
+    background-color: var(--color-dk-pink);
+}
+
+.container {
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-col-spread {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-child-left {
+    margin-right: auto;
+}
+
+.flex-child-center {
+    margin: auto;
+    flex-grow: 1;
+}
+
+.flex-child-right {
+    margin-left: auto;
+}
+
+.title-cursive {
+    font-weight: 500;
+    font-size: 2.5em;
+    font-family: 'Amatic SC', cursive;
+}
